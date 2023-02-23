@@ -1,0 +1,504 @@
+// Home Page
+.home-page {
+  width: 100%;
+  height: 100%;
+  min-height: 730px;
+  .wrap {
+    .info-wrapper {
+      grid-gap: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 20px 0;
+      padding: 80px 0;
+      border-bottom: 1px solid #747474;
+      @include media("<=desktop") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include media("<=tablet") {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .info-card {
+        height: 250px;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #f9f8fe;
+        border-radius: 15px;
+        background: #ffffff;
+        box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-image: url("../../../public/images/frame1.png");
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          background-image: url("../../../public/images/frame1.png");
+        }
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+          background-image: url("../../../public/images/frame2.png");
+        }
+        .icons {
+          height: 90px;
+          width: 90px;
+          overflow: hidden;
+          .ellips {
+            width: 100%;
+          }
+          .icon {
+            height: 36px;
+          }
+        }
+        .card-name {
+          margin: 30px 0;
+          text-align: center;
+          .name {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #000000;
+          }
+          .amount {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            color: #000000;
+          }
+        }
+        .card-action {
+          width: 100%;
+          .name {
+            font-size: 12px;
+          }
+          .btn {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            border-radius: 5px;
+            color: #ffffff;
+            padding: 6px 12px;
+            @include media("<=phoneH") {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+    .plan-section {
+      margin: 60px 0;
+      min-height: 700px;
+      padding: 40px 30px;
+      background: #ffffff;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+      @include media("<=phoneH") {
+        padding: 20px 12px;
+      }
+      .section-tabs {
+        @include media("<=phoneH") {
+          width: 100%;
+        }
+        .tabs {
+          border: 3px solid #7927f2;
+          border-radius: 5px;
+          overflow: hidden;
+          @include media("<=phoneH") {
+            width: 100%;
+          }
+          .btn {
+            background: transparent;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #747474;
+            @include media("<=phoneH") {
+              font-size: 9px;
+              padding: 8px;
+            }
+            &.active {
+              color: #ffffff;
+              background: $themeColor;
+            }
+            @include media("<=phoneH") {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .lock-overlay {
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        position: absolute;
+        background: linear-gradient(
+          242.33deg,
+          rgba(136, 69, 236, 0.7) 0%,
+          rgba(210, 178, 254, 0.7) 100.49%
+        );
+        filter: blur(0.2px);
+        border-radius: 12px;
+        .over_wrapper {
+          width: 100%;
+          z-index: 10;
+          @include media("<=tablet") {
+            width: 100%;
+          }
+          @include media("<=phoneH") {
+            width: 100%;
+          }
+          .icon {
+            z-index: 10;
+          }
+          .desc {
+            z-index: 10;
+            margin: 25px 0;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 150.02%;
+            text-align: center;
+            color: #ffffff;
+            @include media("<=phoneH") {
+              font-size: 20px;
+            }
+          }
+          .action {
+            z-index: 10;
+            .btn {
+              border-radius: 10px;
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 19px;
+              text-align: center;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .planes-block {
+        position: relative;
+        margin: 60px 0;
+        .plan-wrapper {
+          margin: 40px 20px;
+          grid-gap: 40px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          @include media("<=desktop") {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          @include media("<=tablet") {
+            grid-gap: 30px;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 14px 10px;
+          }
+          .plan-card {
+            width: 100%;
+            height: 255px;
+            padding: 20px 20px;
+            border-radius: 6px;
+            border: 1.5px solid #7927f2;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            .box-hdr {
+              width: 100%;
+              .hdr-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 9px;
+                color: #3f3f3f;
+              }
+            }
+            .card-boxes {
+              flex: 1;
+              align-items: start;
+              margin-top: 12px;
+              .inner-box {
+                height: 100px;
+                position: relative;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                @include media("<=tablet") {
+                  width: 214px;
+                }
+                .circle-branches {
+                  .circle {
+                    height: 50px;
+                    width: 50px;
+                    border: 1px solid #000000;
+                    border-radius: 50%;
+                  }
+                  .line1 {
+                    height: 40px;
+                    border-left: 1px dashed #000000;
+                    transform: rotate(216deg);
+                    position: absolute;
+                    bottom: -30px;
+                    left: -10px;
+                  }
+                  .line2 {
+                    height: 36px;
+                    border-left: 1px dashed #000000;
+                    transform: rotate(180deg);
+                    position: absolute;
+                    bottom: -36px;
+                    left: 24px;
+                  }
+                  .line3 {
+                    height: 48px;
+                    border-left: 1px dashed #000000;
+                    transform: rotate(-216deg);
+                    position: absolute;
+                    bottom: -38px;
+                    right: -9px;
+                  }
+                  .line4 {
+                    height: 34px;
+                    border-left: 1px dashed #000000;
+                    transform: rotate(308deg);
+                    position: absolute;
+                    bottom: -10px;
+                    right: -12px;
+                  }
+                }
+                .small-boxes {
+                  width: 100%;
+                  .s-box {
+                    height: 34px;
+                    width: 34px;
+                    border: 1px solid #000000;
+                    border-radius: 50%;
+                    position: absolute;
+                    &.yellow {
+                      background: #ffe600;
+                    }
+                    &.green {
+                      background: rgb(4, 255, 0);
+                    }
+
+                    &:first-child {
+                      left: 32px;
+                      bottom: -60px;
+                    }
+                    &:nth-child(2) {
+                      left: 90px;
+                      bottom: -72px;
+                    }
+                    &:nth-child(3) {
+                      bottom: -66px;
+                      left: 148px;
+                      @include media("<=tablet") {
+                        bottom: -64px;
+                        left: 145px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .info-sec {
+              margin-top: 6px;
+              .info-item {
+                .lbl {
+                  font-size: 12px;
+                }
+              }
+            }
+            .card-action {
+              padding-top: 12px;
+              .btn {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 9px;
+                color: #000000;
+                padding: 6px 10px;
+                background: transparent;
+                border-bottom: 1px solid #000000;
+              }
+            }
+          }
+        }
+      }
+      .prices-block {
+        flex: 1;
+        margin-top: 20px;
+        position: relative;
+        .prices-wrapper {
+          width: 100%;
+          margin: 40px 20px;
+          grid-gap: 30px;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          @include media("<=desktop") {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @include media("<=tablet") {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .price-card {
+            width: 100%;
+            height: 300px;
+            background: #ffffff;
+            padding: 28px 18px;
+            border-radius: 12px;
+            border: 2px solid #7927f2;
+            justify-content: space-between;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            .price-tag {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 22px;
+              line-height: 32px;
+              color: #565656;
+              text-align: center;
+            }
+            .price-amount {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 28px;
+              line-height: 38px;
+              color: #000000;
+              text-align: center;
+              margin: 12px 0;
+            }
+            .items-list {
+              .item {
+                margin-bottom: 12px;
+                .dot {
+                  background: $themeColor;
+                  padding: 4px;
+                  border-radius: 50%;
+                  margin-right: 12px;
+                }
+                .lbl {
+                  font-family: "Inter";
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 18px;
+                  line-height: 26px;
+                  color: #4b4a4a;
+                }
+              }
+            }
+            .action {
+              .btn-buy {
+                padding: 8px 32px;
+                border-radius: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .earning-sec {
+      margin: 60px 0;
+      min-height: 400px;
+      padding: 40px 30px;
+      background: #ffffff;
+      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+      .sec-tag {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000000;
+        margin-bottom: 30px;
+        @include media("<=phoneH") {
+          font-size: 18px;
+        }
+      }
+      .table-block {
+        background: #f9f8fe;
+        border-radius: 10px;
+        overflow: hidden;
+
+        @include media("<=tablet") {
+          overflow: auto;
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+          }
+        }
+        .table-row {
+          padding: 20px 40px;
+          @include media("<=tablet") {
+            width: 830px;
+          }
+          &:first-child {
+            padding: 20px 40px;
+            background: #010101;
+            border-bottom: 2px solid #161621;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #000000;
+            .row-lbl {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 20px;
+              line-height: 27px;
+              color: #000000;
+            }
+          }
+          &:last-child {
+            margin-bottom: 20px;
+          }
+          &:nth-child(odd) {
+            background: #e6e6e6;
+          }
+          .row-item {
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            &:first-child {
+              flex: 0.3;
+              @include media("<=phoneH") {
+                flex: 0.1;
+              }
+            }
+            .row-lbl {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 17px;
+              color: #000000;
+            }
+            &.row-item-black {
+              .row-lbl {
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

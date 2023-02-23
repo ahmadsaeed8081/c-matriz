@@ -1,0 +1,99 @@
+.login-page {
+  height: 100vh;
+  min-height: 690px;
+  width: 100%;
+  background: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../../public/images/frame3.png");
+  @include media("<=tablet") {
+    min-height: 500px;
+  }
+  .wrap {
+    height: 100%;
+    .wrapper-box {
+      width: 660px;
+      min-height: 480px;
+      padding: 20px;
+      border: 1px solid #f9f8fe;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.25);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+      background-image: url("../../../public/images/frame4.png");
+      @include media("<=tablet") {
+        width: 360px;
+        padding: 30px 0px;
+      }
+      .container {
+        width: 60%;
+        height: 100%;
+        @include media("<=tablet") {
+          width: 90%;
+        }
+        @include media("<=phoneH") {
+          width: 100%;
+        }
+        .logo {
+          .logo-img {
+
+        width: 75px;
+        height: 75px;
+          }
+        }
+        .login-desc {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 26px;
+          color: #000000;
+          text-align: center;
+          margin: 30px 0;
+          @include media("<=phoneH") {
+            margin: 12px 0;
+            font-size: 20px;
+            line-height: 20px;
+          }
+        }
+        .txt {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 21px;
+          color: #7d7d7d;
+          border: 2px solid #5b5b5b;
+          border-radius: 8px;
+          padding: 8px 12px;
+          &:focus {
+            border-color: #7927f2;
+          }
+        }
+        .action {
+          gap: 30px;
+          margin: 26px 0;
+          @include media("<=phoneH") {
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+          }
+          .btn {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ffffff;
+            border-radius: 6px;
+            @include media("<=phoneH") {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
